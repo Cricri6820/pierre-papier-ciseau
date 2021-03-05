@@ -1,0 +1,27 @@
+body
+{
+    background-color: whitesmoke
+}
+
+header a
+{
+    background-color: #404040;
+    color: white
+}
+
+.select
+{
+    border: 2px crimson solid;
+}
+
+button
+{
+    background-color: #404040;
+    color: white 
+}
+
+button:hover
+{
+    background-color: #606060;
+    color: white 
+}

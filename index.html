@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="script.js"></script>
     <title>Pierre Papier Ciseau</title>
 </head>
 <body>
@@ -13,15 +15,19 @@
         <a href="credit.html">Contribution</a>
     </header>
     <div>
-        <div class="ia"></div>
+        <div id="iaimg">
+
+        </div>
 
         <table>
             <tr>
-                <td><button><img scr="image/pierre.png" alt="Pierre"></button></td> <!--Lien d'image -->
-                <td><button><img scr="image/papier.png" alt="Papier"></button></td>
-                <td><button><img scr="image/ciseau.png" alt="Ciseau"></button></td>
+                <td><button onclick="pierre()"><img src="images/pierre.png" alt="Pierre"></button></td> <!--Lien d'image -->
+                <td><button onclick="papier()"><img src="images/papier.png" alt="Papier"></button></td>
+                <td><button onclick="ciseau()"><img src="images/ciseau.png" alt="Ciseau"></button></td>
             </tr>
         </table>
+
+        <p id="iatxt"></p>
     </div>
     <footer>
 
