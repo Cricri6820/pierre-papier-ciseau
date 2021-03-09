@@ -3,6 +3,11 @@ body
     background-color: whitesmoke
 }
 
+header
+{
+    margin-bottom: 20px;
+}
+
 header a
 {
     background-color: #404040;

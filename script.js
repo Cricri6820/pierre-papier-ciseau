@@ -1,11 +1,23 @@
-var j1;
-var j2;
-var win;
-var lose;
-var message = document.getElementById("iatxt");
-var image = document.body.getElementById("iaimg");
+var j1 = 0;
+var j2 = 0;
+var win = 0;
+var lose = 0;
 
-var i1 = 
+function aleatoire() {
+    j2 = Math.round(Math.random() * 3 + 0.5)
+
+    if (j2 == 1) {
+        document.querySelector('#iaimg').innerHTML = "<img src='images/pierre.png' alt='Pierre'>";
+    }
+    else if (j2 == 2) {
+        document.querySelector('#iaimg').innerHTML = "<img src='images/papier.png' alt='Papier'>";
+    }
+    else {
+        document.querySelector('#iaimg').innerHTML = "<img src='images/ciseau.png' alt='Ciseau'>";
+    };
+
+    verif();
+};
 
 function pierre() {
     j1 = 1;
@@ -20,32 +32,17 @@ function ciseau() {
     aleatoire()
 };
 
-function aleatoire() {
-    j2 = Math.random() * 3
-
-    if (j2 == 1) {
-        image.append("<img src='images/pierre.png' alt='Pierre'>");
-    }
-    else if (j2 == 2) {
-        image.append("<img src='images/papier.png' alt='Papier'>");
-    }
-    else {
-        image.append("<img src='images/ciseau.png' alt='Ciseau'>");
-    };
-
-    verif();
-};
-
 function verif() {
-    if (j1 == j2 -1 || j1 == j2 +2) {
-        message.nodeValue = "Félicitation, vous avez gagné la manche"
+    if (j1 == j2 +1 || j1 == j2 -2) {
+        document.querySelector('#iatxt').innerHTML = "Félicitation, vous avez gagné la manche";
         win +=1;
     }
-    else if (j1 == j2 +1 || j1 == j2 -2) {
-        message.nodeValue = "Désolé, vous avez perdu la manche..."
+    else if (j1 == j2 -1 || j1 == j2 +2) {
+        document.querySelector('#iatxt').innerHTML = "Désolé, vous avez perdu la manche...";
         lose +=1;
     }
     else {
-        message.nodeValue = "Match nul !"
+        document.querySelector('#iatxt').innerHTML = "Match nul !";
     };
+
 };
