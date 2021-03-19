@@ -25,6 +25,18 @@ button
     color: white 
 }
 
+button:focus
+{
+    background-color: darkgreen;
+    color: white 
+}
+
+button:focus:hover
+{
+    background-color: green;
+    color: white 
+}
+
 button:hover
 {
     background-color: #606060;

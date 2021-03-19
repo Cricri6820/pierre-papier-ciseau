@@ -2,6 +2,7 @@ var j1 = 0;
 var j2 = 0;
 var win = 0;
 var lose = 0;
+var replay = false;
 
 function aleatoire() {
     j2 = Math.round(Math.random() * 3 + 0.5)
@@ -20,16 +21,22 @@ function aleatoire() {
 };
 
 function pierre() {
-    j1 = 1;
-    aleatoire()
+    if (replay == false) {
+        j1 = 1;
+        aleatoire()
+    }
 };
 function papier() {
-    j1 = 2;
-    aleatoire()
+    if (replay == false) {
+        j1 = 2;
+        aleatoire()
+    }
 };
 function ciseau() {
-    j1 = 3;
-    aleatoire()
+    if (replay == false) {
+        j1 = 3;
+        aleatoire()  
+    }
 };
 
 function verif() {
@@ -39,6 +46,7 @@ function verif() {
         }
         else {
             document.querySelector('#iatxt').innerHTML = "Bravo, vous avez gagné la partie (GG)";
+            restart();
         }
             
         win +=1;
@@ -49,6 +57,7 @@ function verif() {
         }
         else {
             document.querySelector('#iatxt').innerHTML = "Condoléances, vous avez perdu la partie...(NUL)";
+            restart();
         }
         
         lose +=1;
@@ -56,6 +65,22 @@ function verif() {
     else {
         document.querySelector('#iatxt').innerHTML = "Match nul !";
     };
+    document.querySelector('#gagnant').innerHTML = "Gagnant : " + win;
+    document.querySelector('#perdant').innerHTML = "Perdant : " + lose;
+};
+
+function restart() {
+    replay = true;
+    document.querySelector('#reset').innerHTML = "<button onclick='refresh()'>Ressayer</button>";
+};
+
+function refresh() {
+    win = 0;
+    lose = 0;
+    replay = false;
+    document.querySelector('#iatxt').innerHTML = "";
+    document.querySelector('#iaimg').innerHTML = "";
+    document.querySelector('#reset').innerHTML = "";
     document.querySelector('#gagnant').innerHTML = "Gagnant : " + win;
     document.querySelector('#perdant').innerHTML = "Perdant : " + lose;
 };
