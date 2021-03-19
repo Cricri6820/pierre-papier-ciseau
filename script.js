@@ -34,15 +34,28 @@ function ciseau() {
 
 function verif() {
     if (j1 == j2 +1 || j1 == j2 -2) {
-        document.querySelector('#iatxt').innerHTML = "Félicitation, vous avez gagné la manche";
+        if (win < 2) {
+            document.querySelector('#iatxt').innerHTML = "Félicitation, vous avez gagné la manche";
+        }
+        else {
+            document.querySelector('#iatxt').innerHTML = "Bravo, vous avez gagné la partie (GG)";
+        }
+            
         win +=1;
     }
     else if (j1 == j2 -1 || j1 == j2 +2) {
-        document.querySelector('#iatxt').innerHTML = "Désolé, vous avez perdu la manche...";
+        if (lose < 2) {
+            document.querySelector('#iatxt').innerHTML = "Désolé, vous avez perdu la manche...";
+        }
+        else {
+            document.querySelector('#iatxt').innerHTML = "Condoléances, vous avez perdu la partie...(NUL)";
+        }
+        
         lose +=1;
     }
     else {
         document.querySelector('#iatxt').innerHTML = "Match nul !";
     };
-
+    document.querySelector('#gagnant').innerHTML = "Gagnant : " + win;
+    document.querySelector('#perdant').innerHTML = "Perdant : " + lose;
 };

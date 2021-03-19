@@ -30,3 +30,11 @@ button:hover
     background-color: #606060;
     color: white 
 }
+
+#gagnant {
+    color: green
+}
+
+#perdant {
+    color: darkred
+}
