@@ -44,16 +44,9 @@ button:hover
 }
 
 #gagnant {
-    color: green
+    color: green;
 }
 
 #perdant {
-    color: darkred
-}
-
-div{
-    text-align: center
-}
-table{
-    margin:auto;
+    color: darkred;
 }
