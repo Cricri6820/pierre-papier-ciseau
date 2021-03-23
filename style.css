@@ -1,6 +1,8 @@
 body
 {
-    background-color: whitesmoke
+    background-image: url("images/fond.jpeg");
+    background-size: 200px;
+    background-repeat: reprat;
 }
 
 header
