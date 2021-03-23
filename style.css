@@ -1,8 +1,13 @@
-body
+#mainpage
 {
     background-image: url("images/fond.jpeg");
     background-size: 200px;
     background-repeat: reprat;
+}
+
+body
+{
+    background-color: ivory;
 }
 
 header
@@ -60,4 +65,11 @@ div {
 
 table{ 
     margin:auto; 
+}
+
+#clair{
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 300px;
+    margin: auto;
+    padding: 10px;
 }
