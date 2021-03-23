@@ -73,3 +73,13 @@ table{
     margin: auto;
     padding: 10px;
 }
+
+header
+{
+    text-align: center;
+}
+
+header a
+{
+    padding: 3px;
+}
