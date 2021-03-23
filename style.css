@@ -50,3 +50,12 @@ button:hover
 #perdant {
     color: darkred;
 }
+
+div {
+    box-align: center;
+    text-align: center;
+}
+
+table{ 
+    margin:auto; 
+}
