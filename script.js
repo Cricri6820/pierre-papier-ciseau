@@ -8,13 +8,13 @@ function aleatoire() {
     j2 = Math.round(Math.random() * 3 + 0.5)
 
     if (j2 == 1) {
-        document.querySelector('#iaimg').innerHTML = "<img src='images/pierre.png' alt='Pierre'>";
+        document.querySelector('#iaimg').innerHTML = "<img src='images/pierre.png' alt='Pierre' title='Pierre'>";
     }
     else if (j2 == 2) {
-        document.querySelector('#iaimg').innerHTML = "<img src='images/papier.png' alt='Papier'>";
+        document.querySelector('#iaimg').innerHTML = "<img src='images/papier.png' alt='Papier' title='Papier'>";
     }
     else {
-        document.querySelector('#iaimg').innerHTML = "<img src='images/ciseau.png' alt='Ciseau'>";
+        document.querySelector('#iaimg').innerHTML = "<img src='images/ciseau.png' alt='Ciseau' title='Ciseau'>";
     };
 
     verif();
@@ -61,6 +61,9 @@ function verif() {
         }
         
         lose +=1;
+
+        //document.styleSheets[0].cssRules[6].style.background-color = "crimson";
+        document.styleSheets[0].cssRules[7].style.background-color = "red";
     }
     else {
         document.querySelector('#iatxt').innerHTML = "Match nul !";
