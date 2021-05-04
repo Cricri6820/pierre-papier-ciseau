@@ -50,6 +50,16 @@ function verif() {
         }
             
         win +=1;
+
+        if (j1 == 1) {
+            document.querySelector('#buttons').innerHTML = '<td><button onclick="pierre()" class="green"><img src="images/pierre.png" alt="Pierre" title="Pierre"></button></td> <td><button onclick="papier()"><img src="images/papier.png" alt="Papier" title="Papier"></button></td> <td><button onclick="ciseau()"><img src="images/ciseau.png" alt="Ciseau" title="Ciseau"></button></td>'
+        }
+        else if (j1 == 2) {
+            document.querySelector('#buttons').innerHTML = '<td><button onclick="pierre()"><img src="images/pierre.png" alt="Pierre" title="Pierre"></button></td> <td><button onclick="papier()" class="green"><img src="images/papier.png" alt="Papier" title="Papier"></button></td> <td><button onclick="ciseau()"><img src="images/ciseau.png" alt="Ciseau" title="Ciseau"></button></td>'
+        }
+        else {
+            document.querySelector('#buttons').innerHTML = '<td><button onclick="pierre()"><img src="images/pierre.png" alt="Pierre" title="Pierre"></button></td> <td><button onclick="papier()"><img src="images/papier.png" alt="Papier" title="Papier"></button></td> <td><button onclick="ciseau()" class="green"><img src="images/ciseau.png" alt="Ciseau" title="Ciseau"></button></td>'
+        }
     }
     else if (j1 == j2 -1 || j1 == j2 +2) {
         if (lose < 2) {
@@ -62,11 +72,29 @@ function verif() {
         
         lose +=1;
 
-        //document.styleSheets[0].cssRules[6].style.background-color = "crimson";
-        document.styleSheets[0].cssRules[7].style.background-color = "red";
+        if (j1 == 1) {
+            document.querySelector('#buttons').innerHTML = '<td><button onclick="pierre()" class="red"><img src="images/pierre.png" alt="Pierre" title="Pierre"></button></td> <td><button onclick="papier()"><img src="images/papier.png" alt="Papier" title="Papier"></button></td> <td><button onclick="ciseau()"><img src="images/ciseau.png" alt="Ciseau" title="Ciseau"></button></td>'
+        }
+        else if (j1 == 2) {
+            document.querySelector('#buttons').innerHTML = '<td><button onclick="pierre()"><img src="images/pierre.png" alt="Pierre" title="Pierre"></button></td> <td><button onclick="papier()" class="red"><img src="images/papier.png" alt="Papier" title="Papier"></button></td> <td><button onclick="ciseau()"><img src="images/ciseau.png" alt="Ciseau" title="Ciseau"></button></td>'
+        }
+        else {
+            document.querySelector('#buttons').innerHTML = '<td><button onclick="pierre()"><img src="images/pierre.png" alt="Pierre" title="Pierre"></button></td> <td><button onclick="papier()"><img src="images/papier.png" alt="Papier" title="Papier"></button></td> <td><button onclick="ciseau()" class="red"><img src="images/ciseau.png" alt="Ciseau" title="Ciseau"></button></td>'
+        }
+        
     }
     else {
         document.querySelector('#iatxt').innerHTML = "Match nul !";
+
+        if (j1 == 1) {
+            document.querySelector('#buttons').innerHTML = '<td><button onclick="pierre()" class="grey"><img src="images/pierre.png" alt="Pierre" title="Pierre"></button></td> <td><button onclick="papier()"><img src="images/papier.png" alt="Papier" title="Papier"></button></td> <td><button onclick="ciseau()"><img src="images/ciseau.png" alt="Ciseau" title="Ciseau"></button></td>'
+        }
+        else if (j1 == 2) {
+            document.querySelector('#buttons').innerHTML = '<td><button onclick="pierre()"><img src="images/pierre.png" alt="Pierre" title="Pierre"></button></td> <td><button onclick="papier()" class="grey"><img src="images/papier.png" alt="Papier" title="Papier"></button></td> <td><button onclick="ciseau()"><img src="images/ciseau.png" alt="Ciseau" title="Ciseau"></button></td>'
+        }
+        else {
+            document.querySelector('#buttons').innerHTML = '<td><button onclick="pierre()"><img src="images/pierre.png" alt="Pierre" title="Pierre"></button></td> <td><button onclick="papier()"><img src="images/papier.png" alt="Papier" title="Papier"></button></td> <td><button onclick="ciseau()" class="grey"><img src="images/ciseau.png" alt="Ciseau" title="Ciseau"></button></td>'
+        }
     };
     document.querySelector('#gagnant').innerHTML = "Gagnant : " + win;
     document.querySelector('#perdant').innerHTML = "Perdant : " + lose;
@@ -86,4 +114,5 @@ function refresh() {
     document.querySelector('#reset').innerHTML = "";
     document.querySelector('#gagnant').innerHTML = "Gagnant : " + win;
     document.querySelector('#perdant').innerHTML = "Perdant : " + lose;
+    document.querySelector('#buttons').innerHTML = '<td><button onclick="pierre()"><img src="images/pierre.png" alt="Pierre" title="Pierre"></button></td> <td><button onclick="papier()"><img src="images/papier.png" alt="Papier" title="Papier"></button></td> <td><button onclick="ciseau()"><img src="images/ciseau.png" alt="Ciseau" title="Ciseau"></button></td>'
 };
